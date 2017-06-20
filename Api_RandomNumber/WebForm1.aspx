@@ -33,7 +33,7 @@
              dataType: "json",
              data: "{}",
              success: function (result) {
-                 console.log(result.d);
+                 console.log(result);
              },
              error: function (result) {
              alert(result.message);
