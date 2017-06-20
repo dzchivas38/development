@@ -13,10 +13,10 @@ namespace Api_RandomNumber.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class demoEntities : DbContext
+    public partial class RandomNumberEntities : DbContext
     {
-        public demoEntities()
-            : base("name=demoEntities")
+        public RandomNumberEntities()
+            : base("name=RandomNumberEntities")
         {
         }
     
@@ -25,7 +25,6 @@ namespace Api_RandomNumber.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
-        public virtual DbSet<test> tests { get; set; }
+        public virtual DbSet<tbltest> tbltests { get; set; }
     }
 }

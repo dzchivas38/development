@@ -19,17 +19,10 @@
          test();
      });
      function test() {
-         //$.get("/test.asmx/HelloWorld", function (data, status) {
-         //    console.log(data);
-         //    console.log("\n");
-         //    console.log(status);
-         //}, function (err) {
-         //    console.log(err);
-         //});
          $.ajax({
              type: "GET",
              contentType: "application/json; charset=utf-8",
-             url: "/test.asmx/HelloWorld",
+             url: "/test.asmx/getAll",
              dataType: "json",
              data: "{}",
              success: function (result) {

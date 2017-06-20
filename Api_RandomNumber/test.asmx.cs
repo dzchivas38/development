@@ -23,5 +23,15 @@ namespace Api_RandomNumber
         {
             return "Hello World";
         }
+        [WebMethod(EnableSession = true)]
+        [System.Web.Script.Services.ScriptMethod(UseHttpGet = true, ResponseFormat = System.Web.Script.Services.ResponseFormat.Json)]
+        public object getAll()
+        {
+            using (var db = new Models.RandomNumberEntities())
+            {
+                var obj = db.tbltests.ToList();
+                return obj;
+            }
+        }
     }
 }

@@ -12,9 +12,10 @@ namespace Api_RandomNumber.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class test
+    public partial class tbltest
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        public string Status { get; set; }
     }
 }

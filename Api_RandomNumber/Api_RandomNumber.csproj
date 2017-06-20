@@ -131,10 +131,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>RandomNumber.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Models\sysdiagram.cs">
-      <DependentUpon>RandomNumber.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\test.cs">
+    <Compile Include="Models\tbltest.cs">
       <DependentUpon>RandomNumber.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
