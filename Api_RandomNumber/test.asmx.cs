@@ -21,7 +21,7 @@ namespace Api_RandomNumber
         [System.Web.Script.Services.ScriptMethod(UseHttpGet = true, ResponseFormat = System.Web.Script.Services.ResponseFormat.Json)]
         public string HelloWorld()
         {
-            return "Hello World";
+            return "Hello World 123";
         }
         [WebMethod(EnableSession = true)]
         [System.Web.Script.Services.ScriptMethod(UseHttpGet = true, ResponseFormat = System.Web.Script.Services.ResponseFormat.Json)]
