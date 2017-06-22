@@ -93,8 +93,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Api_Resource\PlayerResource.asmx" />
+    <Content Include="app.js" />
     <Content Include="DataBase\RandomNumber.sql" />
     <Content Include="Default.aspx" />
+    <Content Include="Erp_Resource\Entities\PlayerListController.js" />
+    <Content Include="Erp_Resource\Static\Footer\Footer.html" />
+    <Content Include="Erp_Resource\Static\Header\Header.html" />
+    <Content Include="Erp_Resource\Static\Sidebar\Sidebar.html" />
+    <Content Include="Erp_Resource\Style\custom.css" />
+    <Content Include="Erp_Resource\Template\partial-about.html" />
+    <Content Include="Erp_Resource\Template\partial-home-list.html" />
+    <Content Include="Erp_Resource\Template\partial-home.html" />
+    <Content Include="Erp_Resource\Template\table-data.html" />
     <Content Include="Global.asax" />
     <Content Include="Models\RandomNumber.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -311,6 +322,51 @@
     <Content Include="node_modules\angular-ui-bootstrap\template\typeahead\typeahead-match.html.js" />
     <Content Include="node_modules\angular-ui-bootstrap\template\typeahead\typeahead-popup.html" />
     <Content Include="node_modules\angular-ui-bootstrap\template\typeahead\typeahead-popup.html.js" />
+    <Content Include="node_modules\angular-ui-router\lib-esm\angular.js" />
+    <Content Include="node_modules\angular-ui-router\lib-esm\directives\stateDirectives.js" />
+    <Content Include="node_modules\angular-ui-router\lib-esm\directives\viewDirective.js" />
+    <Content Include="node_modules\angular-ui-router\lib-esm\index.js" />
+    <Content Include="node_modules\angular-ui-router\lib-esm\injectables.js" />
+    <Content Include="node_modules\angular-ui-router\lib-esm\interface.js" />
+    <Content Include="node_modules\angular-ui-router\lib-esm\legacy\resolveService.js" />
+    <Content Include="node_modules\angular-ui-router\lib-esm\legacy\stateEvents.js" />
+    <Content Include="node_modules\angular-ui-router\lib-esm\locationServices.js" />
+    <Content Include="node_modules\angular-ui-router\lib-esm\services.js" />
+    <Content Include="node_modules\angular-ui-router\lib-esm\statebuilders\onEnterExitRetain.js" />
+    <Content Include="node_modules\angular-ui-router\lib-esm\statebuilders\views.js" />
+    <Content Include="node_modules\angular-ui-router\lib-esm\stateFilters.js" />
+    <Content Include="node_modules\angular-ui-router\lib-esm\stateProvider.js" />
+    <Content Include="node_modules\angular-ui-router\lib-esm\templateFactory.js" />
+    <Content Include="node_modules\angular-ui-router\lib-esm\urlRouterProvider.js" />
+    <Content Include="node_modules\angular-ui-router\lib-esm\viewScroll.js" />
+    <Content Include="node_modules\angular-ui-router\lib\angular.js" />
+    <Content Include="node_modules\angular-ui-router\lib\directives\stateDirectives.js" />
+    <Content Include="node_modules\angular-ui-router\lib\directives\viewDirective.js" />
+    <Content Include="node_modules\angular-ui-router\lib\index.js" />
+    <Content Include="node_modules\angular-ui-router\lib\injectables.js" />
+    <Content Include="node_modules\angular-ui-router\lib\interface.js" />
+    <Content Include="node_modules\angular-ui-router\lib\legacy\resolveService.js" />
+    <Content Include="node_modules\angular-ui-router\lib\legacy\stateEvents.js" />
+    <Content Include="node_modules\angular-ui-router\lib\locationServices.js" />
+    <Content Include="node_modules\angular-ui-router\lib\services.js" />
+    <Content Include="node_modules\angular-ui-router\lib\statebuilders\onEnterExitRetain.js" />
+    <Content Include="node_modules\angular-ui-router\lib\statebuilders\views.js" />
+    <Content Include="node_modules\angular-ui-router\lib\stateFilters.js" />
+    <Content Include="node_modules\angular-ui-router\lib\stateProvider.js" />
+    <Content Include="node_modules\angular-ui-router\lib\templateFactory.js" />
+    <Content Include="node_modules\angular-ui-router\lib\urlRouterProvider.js" />
+    <Content Include="node_modules\angular-ui-router\lib\viewScroll.js" />
+    <Content Include="node_modules\angular-ui-router\migrate\migratewarn.js" />
+    <Content Include="node_modules\angular-ui-router\release\angular-ui-router.js" />
+    <Content Include="node_modules\angular-ui-router\release\angular-ui-router.min.js" />
+    <Content Include="node_modules\angular-ui-router\release\resolveService.js" />
+    <Content Include="node_modules\angular-ui-router\release\resolveService.min.js" />
+    <Content Include="node_modules\angular-ui-router\release\stateEvents.js" />
+    <Content Include="node_modules\angular-ui-router\release\stateEvents.min.js" />
+    <Content Include="node_modules\angular-ui-router\release\ui-router-angularjs.js" />
+    <Content Include="node_modules\angular-ui-router\release\ui-router-angularjs.min.js" />
+    <Content Include="node_modules\angular-ui-router\rollup.config.js" />
+    <Content Include="node_modules\angular-ui-router\stats.html" />
     <Content Include="node_modules\angular\angular-block-ui.min.js" />
     <Content Include="node_modules\angular\angular-csp.css" />
     <Content Include="node_modules\angular\angular-toastr.tpls.js" />
@@ -344,6 +400,7 @@
     <Content Include="node_modules\bootstrap\js\tab.js" />
     <Content Include="node_modules\bootstrap\js\tooltip.js" />
     <Content Include="node_modules\bootstrap\js\transition.js" />
+    <Content Include="node_modules\font-awesome\font-awesome.min.css" />
     <Content Include="node_modules\jquery\AUTHORS.txt" />
     <Content Include="node_modules\jquery\dist\core.js" />
     <Content Include="node_modules\jquery\dist\jquery.js" />
@@ -456,14 +513,82 @@
     <Content Include="node_modules\jquery\src\var\support.js" />
     <Content Include="node_modules\jquery\src\var\toString.js" />
     <Content Include="node_modules\jquery\src\wrap.js" />
-    <Content Include="node_modules\magicsuggest\magicsuggest-min.js" />
+    <Content Include="node_modules\lodash\lodash.min.js" />
+    <Content Include="node_modules\magic-suggest\magicsuggest-min.js" />
     <Content Include="node_modules\moment\moment.min.js" />
-    <Content Include="package.json" />
+    <Content Include="node_modules\rangy\lib\rangy-classapplier.js" />
+    <Content Include="node_modules\rangy\lib\rangy-core.js" />
+    <Content Include="node_modules\rangy\lib\rangy-highlighter.js" />
+    <Content Include="node_modules\rangy\lib\rangy-selectionsaverestore.js" />
+    <Content Include="node_modules\rangy\lib\rangy-serializer.js" />
+    <Content Include="node_modules\rangy\lib\rangy-textrange.js" />
+    <Content Include="node_modules\textangular\demo\demo.html" />
+    <Content Include="node_modules\textangular\demo\static-demo.html" />
+    <Content Include="node_modules\textangular\demo\textAngular.com.html" />
+    <Content Include="node_modules\textangular\dist\textAngular-rangy.min.js" />
+    <Content Include="node_modules\textangular\dist\textAngular-sanitize.js" />
+    <Content Include="node_modules\textangular\dist\textAngular-sanitize.min.js" />
+    <Content Include="node_modules\textangular\dist\textAngular.css" />
+    <Content Include="node_modules\textangular\dist\textAngular.js" />
+    <Content Include="node_modules\textangular\dist\textAngular.min.js" />
+    <Content Include="node_modules\textangular\dist\textAngular.umd.js" />
+    <Content Include="node_modules\textangular\dist\textAngularSetup.js" />
+    <Content Include="node_modules\textangular\Gruntfile.js" />
+    <Content Include="node_modules\textangular\karma-jqlite.conf.js" />
+    <Content Include="node_modules\textangular\karma-jquery.conf.js" />
+    <Content Include="node_modules\textangular\src\demo\demo.html" />
+    <Content Include="node_modules\textangular\src\demo\static-demo.html" />
+    <Content Include="node_modules\textangular\src\demo\textAngular.com.html" />
+    <Content Include="node_modules\textangular\src\DOM.js" />
+    <Content Include="node_modules\textangular\src\factories.js" />
+    <Content Include="node_modules\textangular\src\globals.js" />
+    <Content Include="node_modules\textangular\src\main.js" />
+    <Content Include="node_modules\textangular\src\taBind.js" />
+    <Content Include="node_modules\textangular\src\textAngular-sanitize.js" />
+    <Content Include="node_modules\textangular\src\textAngular.css" />
+    <Content Include="node_modules\textangular\src\textAngularSetup.js" />
+    <Content Include="node_modules\textangular\src\validators.js" />
+    <Content Include="node_modules\textangular\test\helpers.js" />
+    <Content Include="node_modules\textangular\test\taBind\rawHtmlForTablesTest.html" />
+    <Content Include="node_modules\textangular\test\taBind\resultForTablesTest.html" />
+    <Content Include="node_modules\textangular\test\taBind\taBind.%24formatters.spec.js" />
+    <Content Include="node_modules\textangular\test\taBind\taBind.display.spec.js" />
+    <Content Include="node_modules\textangular\test\taBind\taBind.events.spec.js" />
+    <Content Include="node_modules\textangular\test\taBind\taBind.sanitize.spec.js" />
+    <Content Include="node_modules\textangular\test\taBind\taBind.spec.js" />
+    <Content Include="node_modules\textangular\test\taBind\taBind.taReadOnly.spec.js" />
+    <Content Include="node_modules\textangular\test\taBind\taBind.undoManager.spec.js" />
+    <Content Include="node_modules\textangular\test\taBind\taBind.validation.spec.js" />
+    <Content Include="node_modules\textangular\test\taBind\taBind.wordPaste.spec.js" />
+    <Content Include="node_modules\textangular\test\taBind\taBind._taBlankTest.spec.js" />
+    <Content Include="node_modules\textangular\test\taBind\temp.html" />
+    <Content Include="node_modules\textangular\test\taBrowserTag.spec.js" />
+    <Content Include="node_modules\textangular\test\taDOM.spec.js" />
+    <Content Include="node_modules\textangular\test\taExecCommand\taExecCommand.formatBlock.spec.js" />
+    <Content Include="node_modules\textangular\test\taExecCommand\taExecCommand.lists.spec.js" />
+    <Content Include="node_modules\textangular\test\taExecCommand\taExecCommand.spec.js" />
+    <Content Include="node_modules\textangular\test\taFixChrome.spec.js" />
+    <Content Include="node_modules\textangular\test\taMaxText.spec.js" />
+    <Content Include="node_modules\textangular\test\taMinText.spec.js" />
+    <Content Include="node_modules\textangular\test\taRegisterTool.spec.js" />
+    <Content Include="node_modules\textangular\test\taSanitize.spec.js" />
+    <Content Include="node_modules\textangular\test\taToolFunctions.spec.js" />
+    <Content Include="node_modules\textangular\test\taTools.spec.js" />
+    <Content Include="node_modules\textangular\test\textAngular.spec.js" />
+    <Content Include="node_modules\textangular\test\textAngularManager.spec.js" />
+    <Content Include="node_modules\textangular\test\textAngularSanitize\linky.spec.js" />
+    <Content Include="node_modules\textangular\test\textAngularSanitize\ngBindHtml.spec.js" />
+    <Content Include="node_modules\textangular\test\textAngularSanitize\sanitize.spec.js" />
+    <Content Include="node_modules\textangular\test\textAngularToolbar.spec.js" />
     <Content Include="test.asmx" />
     <Content Include="Web.config" />
     <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Api_Resource\PlayerResource.asmx.cs">
+      <DependentUpon>PlayerResource.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -489,6 +614,9 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>RandomNumber.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sysdiagram.cs">
+      <DependentUpon>RandomNumber.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Tbl_ActionType.cs">
       <DependentUpon>RandomNumber.tt</DependentUpon>
@@ -527,6 +655,30 @@
     <Content Include="Models\RandomNumber.edmx.diagram">
       <DependentUpon>RandomNumber.edmx</DependentUpon>
     </Content>
+    <Content Include="node_modules\angular-ui-bootstrap\CHANGELOG.md" />
+    <Content Include="node_modules\angular-ui-bootstrap\LICENSE" />
+    <Content Include="node_modules\angular-ui-bootstrap\package.json" />
+    <Content Include="node_modules\angular-ui-bootstrap\README.md" />
+    <Content Include="node_modules\angular-ui-bootstrap\src\accordion\docs\readme.md" />
+    <Content Include="node_modules\angular-ui-bootstrap\src\alert\docs\readme.md" />
+    <Content Include="node_modules\angular-ui-bootstrap\src\buttons\docs\readme.md" />
+    <Content Include="node_modules\angular-ui-bootstrap\src\carousel\docs\README.md" />
+    <Content Include="node_modules\angular-ui-bootstrap\src\collapse\docs\readme.md" />
+    <Content Include="node_modules\angular-ui-bootstrap\src\dateparser\docs\README.md" />
+    <Content Include="node_modules\angular-ui-bootstrap\src\datepickerPopup\docs\readme.md" />
+    <Content Include="node_modules\angular-ui-bootstrap\src\datepicker\docs\readme.md" />
+    <Content Include="node_modules\angular-ui-bootstrap\src\dropdown\docs\readme.md" />
+    <Content Include="node_modules\angular-ui-bootstrap\src\modal\docs\readme.md" />
+    <Content Include="node_modules\angular-ui-bootstrap\src\pager\docs\readme.md" />
+    <Content Include="node_modules\angular-ui-bootstrap\src\pagination\docs\readme.md" />
+    <Content Include="node_modules\angular-ui-bootstrap\src\popover\docs\readme.md" />
+    <Content Include="node_modules\angular-ui-bootstrap\src\position\docs\readme.md" />
+    <Content Include="node_modules\angular-ui-bootstrap\src\progressbar\docs\readme.md" />
+    <Content Include="node_modules\angular-ui-bootstrap\src\rating\docs\readme.md" />
+    <Content Include="node_modules\angular-ui-bootstrap\src\tabs\docs\readme.md" />
+    <Content Include="node_modules\angular-ui-bootstrap\src\timepicker\docs\readme.md" />
+    <Content Include="node_modules\angular-ui-bootstrap\src\tooltip\docs\readme.md" />
+    <Content Include="node_modules\angular-ui-bootstrap\src\typeahead\docs\readme.md" />
     <Content Include="node_modules\angular\angular.min.js.gzip" />
     <Content Include="node_modules\angular\angular.min.js.map" />
     <Content Include="node_modules\angular\bower.json" />
@@ -631,30 +783,72 @@
     <Content Include="node_modules\jquery\package.json" />
     <Content Include="node_modules\jquery\README.md" />
     <Content Include="node_modules\jquery\src\.eslintrc.json" />
-    <Content Include="node_modules\angular-ui-bootstrap\CHANGELOG.md" />
-    <Content Include="node_modules\angular-ui-bootstrap\LICENSE" />
-    <Content Include="node_modules\angular-ui-bootstrap\package.json" />
-    <Content Include="node_modules\angular-ui-bootstrap\README.md" />
-    <Content Include="node_modules\angular-ui-bootstrap\src\accordion\docs\readme.md" />
-    <Content Include="node_modules\angular-ui-bootstrap\src\alert\docs\readme.md" />
-    <Content Include="node_modules\angular-ui-bootstrap\src\buttons\docs\readme.md" />
-    <Content Include="node_modules\angular-ui-bootstrap\src\carousel\docs\README.md" />
-    <Content Include="node_modules\angular-ui-bootstrap\src\collapse\docs\readme.md" />
-    <Content Include="node_modules\angular-ui-bootstrap\src\dateparser\docs\README.md" />
-    <Content Include="node_modules\angular-ui-bootstrap\src\datepickerPopup\docs\readme.md" />
-    <Content Include="node_modules\angular-ui-bootstrap\src\datepicker\docs\readme.md" />
-    <Content Include="node_modules\angular-ui-bootstrap\src\dropdown\docs\readme.md" />
-    <Content Include="node_modules\angular-ui-bootstrap\src\modal\docs\readme.md" />
-    <Content Include="node_modules\angular-ui-bootstrap\src\pager\docs\readme.md" />
-    <Content Include="node_modules\angular-ui-bootstrap\src\pagination\docs\readme.md" />
-    <Content Include="node_modules\angular-ui-bootstrap\src\popover\docs\readme.md" />
-    <Content Include="node_modules\angular-ui-bootstrap\src\position\docs\readme.md" />
-    <Content Include="node_modules\angular-ui-bootstrap\src\progressbar\docs\readme.md" />
-    <Content Include="node_modules\angular-ui-bootstrap\src\rating\docs\readme.md" />
-    <Content Include="node_modules\angular-ui-bootstrap\src\tabs\docs\readme.md" />
-    <Content Include="node_modules\angular-ui-bootstrap\src\timepicker\docs\readme.md" />
-    <Content Include="node_modules\angular-ui-bootstrap\src\tooltip\docs\readme.md" />
-    <Content Include="node_modules\angular-ui-bootstrap\src\typeahead\docs\readme.md" />
+    <Content Include="package.json" />
+    <Content Include="node_modules\angular-ui-router\CHANGELOG.md" />
+    <Content Include="node_modules\angular-ui-router\CONTRIBUTING.md" />
+    <Content Include="node_modules\angular-ui-router\DOCS.md" />
+    <Content Include="node_modules\angular-ui-router\ISSUE_TEMPLATE.md" />
+    <Content Include="node_modules\angular-ui-router\lib-esm\angular.js.map" />
+    <Content Include="node_modules\angular-ui-router\lib-esm\directives\stateDirectives.js.map" />
+    <Content Include="node_modules\angular-ui-router\lib-esm\directives\viewDirective.js.map" />
+    <Content Include="node_modules\angular-ui-router\lib-esm\index.js.map" />
+    <Content Include="node_modules\angular-ui-router\lib-esm\injectables.js.map" />
+    <Content Include="node_modules\angular-ui-router\lib-esm\interface.js.map" />
+    <Content Include="node_modules\angular-ui-router\lib-esm\legacy\resolveService.js.map" />
+    <Content Include="node_modules\angular-ui-router\lib-esm\legacy\stateEvents.js.map" />
+    <Content Include="node_modules\angular-ui-router\lib-esm\locationServices.js.map" />
+    <Content Include="node_modules\angular-ui-router\lib-esm\services.js.map" />
+    <Content Include="node_modules\angular-ui-router\lib-esm\statebuilders\onEnterExitRetain.js.map" />
+    <Content Include="node_modules\angular-ui-router\lib-esm\statebuilders\views.js.map" />
+    <Content Include="node_modules\angular-ui-router\lib-esm\stateFilters.js.map" />
+    <Content Include="node_modules\angular-ui-router\lib-esm\stateProvider.js.map" />
+    <Content Include="node_modules\angular-ui-router\lib-esm\templateFactory.js.map" />
+    <Content Include="node_modules\angular-ui-router\lib-esm\urlRouterProvider.js.map" />
+    <Content Include="node_modules\angular-ui-router\lib-esm\viewScroll.js.map" />
+    <Content Include="node_modules\angular-ui-router\lib\angular.js.map" />
+    <Content Include="node_modules\angular-ui-router\lib\directives\stateDirectives.js.map" />
+    <Content Include="node_modules\angular-ui-router\lib\directives\viewDirective.js.map" />
+    <Content Include="node_modules\angular-ui-router\lib\index.js.map" />
+    <Content Include="node_modules\angular-ui-router\lib\injectables.js.map" />
+    <Content Include="node_modules\angular-ui-router\lib\interface.js.map" />
+    <Content Include="node_modules\angular-ui-router\lib\legacy\resolveService.js.map" />
+    <Content Include="node_modules\angular-ui-router\lib\legacy\stateEvents.js.map" />
+    <Content Include="node_modules\angular-ui-router\lib\locationServices.js.map" />
+    <Content Include="node_modules\angular-ui-router\lib\services.js.map" />
+    <Content Include="node_modules\angular-ui-router\lib\statebuilders\onEnterExitRetain.js.map" />
+    <Content Include="node_modules\angular-ui-router\lib\statebuilders\views.js.map" />
+    <Content Include="node_modules\angular-ui-router\lib\stateFilters.js.map" />
+    <Content Include="node_modules\angular-ui-router\lib\stateProvider.js.map" />
+    <Content Include="node_modules\angular-ui-router\lib\templateFactory.js.map" />
+    <Content Include="node_modules\angular-ui-router\lib\urlRouterProvider.js.map" />
+    <Content Include="node_modules\angular-ui-router\lib\viewScroll.js.map" />
+    <Content Include="node_modules\angular-ui-router\LICENSE" />
+    <Content Include="node_modules\angular-ui-router\migrate\migrate.json" />
+    <Content Include="node_modules\angular-ui-router\package.json" />
+    <Content Include="node_modules\angular-ui-router\README.md" />
+    <Content Include="node_modules\angular-ui-router\release\angular-ui-router.js.map" />
+    <Content Include="node_modules\angular-ui-router\release\angular-ui-router.min.js.map" />
+    <Content Include="node_modules\angular-ui-router\release\resolveService.js.map" />
+    <Content Include="node_modules\angular-ui-router\release\resolveService.min.js.map" />
+    <Content Include="node_modules\angular-ui-router\release\stateEvents.js.map" />
+    <Content Include="node_modules\angular-ui-router\release\stateEvents.min.js.map" />
+    <Content Include="node_modules\angular-ui-router\release\ui-router-angularjs.js.map" />
+    <Content Include="node_modules\angular-ui-router\release\ui-router-angularjs.min.js.map" />
+    <Content Include="node_modules\angular-ui-router\yarn.lock" />
+    <Content Include="node_modules\textangular\.bowerrc" />
+    <Content Include="node_modules\textangular\.npmignore" />
+    <Content Include="node_modules\textangular\.travis.yml" />
+    <Content Include="node_modules\textangular\bower.json" />
+    <Content Include="node_modules\textangular\changelog.md" />
+    <Content Include="node_modules\textangular\CONTRIBUTING.md" />
+    <Content Include="node_modules\textangular\doit.sh" />
+    <Content Include="node_modules\textangular\moveit.sh" />
+    <Content Include="node_modules\textangular\package.json" />
+    <Content Include="node_modules\textangular\README.md" />
+    <Content Include="node_modules\rangy\.npmignore" />
+    <Content Include="node_modules\rangy\LICENSE" />
+    <Content Include="node_modules\rangy\package.json" />
+    <Content Include="node_modules\rangy\README.md" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -669,6 +863,42 @@
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="node_modules\angular-ui-router\lib-esm\angular.d.ts" />
+    <TypeScriptCompile Include="node_modules\angular-ui-router\lib-esm\directives\stateDirectives.d.ts" />
+    <TypeScriptCompile Include="node_modules\angular-ui-router\lib-esm\directives\viewDirective.d.ts" />
+    <TypeScriptCompile Include="node_modules\angular-ui-router\lib-esm\index.d.ts" />
+    <TypeScriptCompile Include="node_modules\angular-ui-router\lib-esm\injectables.d.ts" />
+    <TypeScriptCompile Include="node_modules\angular-ui-router\lib-esm\interface.d.ts" />
+    <TypeScriptCompile Include="node_modules\angular-ui-router\lib-esm\legacy\resolveService.d.ts" />
+    <TypeScriptCompile Include="node_modules\angular-ui-router\lib-esm\legacy\stateEvents.d.ts" />
+    <TypeScriptCompile Include="node_modules\angular-ui-router\lib-esm\locationServices.d.ts" />
+    <TypeScriptCompile Include="node_modules\angular-ui-router\lib-esm\services.d.ts" />
+    <TypeScriptCompile Include="node_modules\angular-ui-router\lib-esm\statebuilders\onEnterExitRetain.d.ts" />
+    <TypeScriptCompile Include="node_modules\angular-ui-router\lib-esm\statebuilders\views.d.ts" />
+    <TypeScriptCompile Include="node_modules\angular-ui-router\lib-esm\stateFilters.d.ts" />
+    <TypeScriptCompile Include="node_modules\angular-ui-router\lib-esm\stateProvider.d.ts" />
+    <TypeScriptCompile Include="node_modules\angular-ui-router\lib-esm\templateFactory.d.ts" />
+    <TypeScriptCompile Include="node_modules\angular-ui-router\lib-esm\urlRouterProvider.d.ts" />
+    <TypeScriptCompile Include="node_modules\angular-ui-router\lib-esm\viewScroll.d.ts" />
+    <TypeScriptCompile Include="node_modules\angular-ui-router\lib\angular.d.ts" />
+    <TypeScriptCompile Include="node_modules\angular-ui-router\lib\directives\stateDirectives.d.ts" />
+    <TypeScriptCompile Include="node_modules\angular-ui-router\lib\directives\viewDirective.d.ts" />
+    <TypeScriptCompile Include="node_modules\angular-ui-router\lib\index.d.ts" />
+    <TypeScriptCompile Include="node_modules\angular-ui-router\lib\injectables.d.ts" />
+    <TypeScriptCompile Include="node_modules\angular-ui-router\lib\interface.d.ts" />
+    <TypeScriptCompile Include="node_modules\angular-ui-router\lib\legacy\resolveService.d.ts" />
+    <TypeScriptCompile Include="node_modules\angular-ui-router\lib\legacy\stateEvents.d.ts" />
+    <TypeScriptCompile Include="node_modules\angular-ui-router\lib\locationServices.d.ts" />
+    <TypeScriptCompile Include="node_modules\angular-ui-router\lib\services.d.ts" />
+    <TypeScriptCompile Include="node_modules\angular-ui-router\lib\statebuilders\onEnterExitRetain.d.ts" />
+    <TypeScriptCompile Include="node_modules\angular-ui-router\lib\statebuilders\views.d.ts" />
+    <TypeScriptCompile Include="node_modules\angular-ui-router\lib\stateFilters.d.ts" />
+    <TypeScriptCompile Include="node_modules\angular-ui-router\lib\stateProvider.d.ts" />
+    <TypeScriptCompile Include="node_modules\angular-ui-router\lib\templateFactory.d.ts" />
+    <TypeScriptCompile Include="node_modules\angular-ui-router\lib\urlRouterProvider.d.ts" />
+    <TypeScriptCompile Include="node_modules\angular-ui-router\lib\viewScroll.d.ts" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
