@@ -5,32 +5,147 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
       <Schema Namespace="RandomNumberModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityType Name="tbltest">
+        <EntityType Name="Tbl_ActionType">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Name" Type="nvarchar" MaxLength="50" />
-          <Property Name="Status" Type="nvarchar(max)" />
+          <Property Name="guid" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="255" />
+          <Property Name="ActionTypeLevel" Type="int" />
+          <Property Name="InCoin" Type="int" />
+          <Property Name="OutCoin" Type="int" />
+          <Property Name="IsFirstChirld" Type="bit" />
+          <Property Name="Description" Type="nvarchar(max)" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'RandomNumber.dbo.Tbl_CashOut' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Tbl_CashOut">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="guid" Type="uniqueidentifier" />
+          <Property Name="PlayerId" Type="int" />
+          <Property Name="ActionTypeId" Type="int" />
+          <Property Name="Ratio" Type="float" />
+          <Property Name="Description" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Tbl_Player">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="guid" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" />
+          <Property Name="PhoneNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="PlayerTypeId" Type="int" />
+          <Property Name="IsDelete" Type="bit" />
+          <Property Name="Description" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Tbl_PlayerType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="guid" Type="uniqueidentifier" />
+          <Property Name="Name" Type="nvarchar" MaxLength="255" />
+          <Property Name="RuleAction" Type="int" />
+          <Property Name="Description" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Tbl_Syntax">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="guid" Type="uniqueidentifier" />
+          <Property Name="Name" Type="nvarchar" MaxLength="255" />
+          <Property Name="ActionTypeId" Type="int" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" />
         </EntityType>
         <EntityContainer Name="RandomNumberModelStoreContainer">
-          <EntitySet Name="tbltest" EntityType="Self.tbltest" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tbl_ActionType" EntityType="Self.Tbl_ActionType" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tbl_Player" EntityType="Self.Tbl_Player" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tbl_PlayerType" EntityType="Self.Tbl_PlayerType" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tbl_Syntax" EntityType="Self.Tbl_Syntax" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tbl_CashOut" EntityType="Self.Tbl_CashOut" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Tbl_CashOut].[Id] AS [Id], 
+    [Tbl_CashOut].[guid] AS [guid], 
+    [Tbl_CashOut].[PlayerId] AS [PlayerId], 
+    [Tbl_CashOut].[ActionTypeId] AS [ActionTypeId], 
+    [Tbl_CashOut].[Ratio] AS [Ratio], 
+    [Tbl_CashOut].[Description] AS [Description]
+    FROM [dbo].[Tbl_CashOut] AS [Tbl_CashOut]</DefiningQuery>
+          </EntitySet>
         </EntityContainer>
       </Schema>
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="RandomNumberModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="tbltest">
+        <EntityType Name="Tbl_ActionType">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Status" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="guid" Type="Guid" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ActionTypeLevel" Type="Int32" />
+          <Property Name="InCoin" Type="Int32" />
+          <Property Name="OutCoin" Type="Int32" />
+          <Property Name="IsFirstChirld" Type="Boolean" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Tbl_Player">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="guid" Type="Guid" Nullable="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PlayerTypeId" Type="Int32" />
+          <Property Name="IsDelete" Type="Boolean" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Tbl_PlayerType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="guid" Type="Guid" />
+          <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="RuleAction" Type="Int32" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Tbl_Syntax">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="guid" Type="Guid" />
+          <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ActionTypeId" Type="Int32" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Tbl_CashOut">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="guid" Type="Guid" />
+          <Property Name="PlayerId" Type="Int32" />
+          <Property Name="ActionTypeId" Type="Int32" />
+          <Property Name="Ratio" Type="Double" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityContainer Name="RandomNumberEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="tbltests" EntityType="Self.tbltest" />
+          <EntitySet Name="Tbl_ActionType" EntityType="Self.Tbl_ActionType" />
+          <EntitySet Name="Tbl_Player" EntityType="Self.Tbl_Player" />
+          <EntitySet Name="Tbl_PlayerType" EntityType="Self.Tbl_PlayerType" />
+          <EntitySet Name="Tbl_Syntax" EntityType="Self.Tbl_Syntax" />
+          <EntitySet Name="Tbl_CashOut" EntityType="Self.Tbl_CashOut" />
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
@@ -38,12 +153,64 @@
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="RandomNumberModelStoreContainer" CdmEntityContainer="RandomNumberEntities">
-          <EntitySetMapping Name="tbltests">
-            <EntityTypeMapping TypeName="RandomNumberModel.tbltest">
-              <MappingFragment StoreEntitySet="tbltest">
+          <EntitySetMapping Name="Tbl_ActionType">
+            <EntityTypeMapping TypeName="RandomNumberModel.Tbl_ActionType">
+              <MappingFragment StoreEntitySet="Tbl_ActionType">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="guid" ColumnName="guid" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ActionTypeLevel" ColumnName="ActionTypeLevel" />
+                <ScalarProperty Name="InCoin" ColumnName="InCoin" />
+                <ScalarProperty Name="OutCoin" ColumnName="OutCoin" />
+                <ScalarProperty Name="IsFirstChirld" ColumnName="IsFirstChirld" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_Player">
+            <EntityTypeMapping TypeName="RandomNumberModel.Tbl_Player">
+              <MappingFragment StoreEntitySet="Tbl_Player">
+                <ScalarProperty Name="guid" ColumnName="guid" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+                <ScalarProperty Name="PlayerTypeId" ColumnName="PlayerTypeId" />
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_PlayerType">
+            <EntityTypeMapping TypeName="RandomNumberModel.Tbl_PlayerType">
+              <MappingFragment StoreEntitySet="Tbl_PlayerType">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="guid" ColumnName="guid" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="RuleAction" ColumnName="RuleAction" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_Syntax">
+            <EntityTypeMapping TypeName="RandomNumberModel.Tbl_Syntax">
+              <MappingFragment StoreEntitySet="Tbl_Syntax">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="guid" ColumnName="guid" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ActionTypeId" ColumnName="ActionTypeId" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_CashOut">
+            <EntityTypeMapping TypeName="RandomNumberModel.Tbl_CashOut">
+              <MappingFragment StoreEntitySet="Tbl_CashOut">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="guid" ColumnName="guid" />
+                <ScalarProperty Name="PlayerId" ColumnName="PlayerId" />
+                <ScalarProperty Name="ActionTypeId" ColumnName="ActionTypeId" />
+                <ScalarProperty Name="Ratio" ColumnName="Ratio" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
