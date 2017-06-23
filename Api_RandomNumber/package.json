@@ -11,6 +11,7 @@
     "jquery": "^3.2.1",
     "lodash": "^4.17.4",
     "lodash.min": "^4.0.1",
+    "simple-line-icons": "^2.4.1",
     "textangular": "^1.5.16"
   },
   "devDependencies": {},

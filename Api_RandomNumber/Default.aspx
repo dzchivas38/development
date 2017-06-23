@@ -33,7 +33,8 @@
     <!-- ---ENDCONTROLLER----- -->
 
     <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet " type="text/css " />
-    <link rel='stylesheet' href="node_modules/font-awesome/font-awesome.min.css" />
+    <link rel='stylesheet' href="node_modules/font-awesome/css/font-awesome.min.css" />
+    <link rel='stylesheet' href="node_modules/simple-line-icons/css/simple-line-icons.css" />
     <link rel='stylesheet' href="node_modules/textangular/dist/textAngular.css" />
     <link rel='stylesheet' href="Erp_Resource/Style/custom.css" />
 </head>
