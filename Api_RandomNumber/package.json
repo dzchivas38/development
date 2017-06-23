@@ -6,7 +6,12 @@
   "dependencies": {
     "angular": "^1.6.4",
     "angular-ui-bootstrap": "^2.5.0",
-    "jquery": "^3.2.1"
+    "angular-ui-router": "^1.0.3",
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.2.1",
+    "lodash": "^4.17.4",
+    "lodash.min": "^4.0.1",
+    "textangular": "^1.5.16"
   },
   "devDependencies": {},
   "scripts": {

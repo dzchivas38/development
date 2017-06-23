@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\Dev-1\Source\Repos\development\Api_RandomNumber\Models\RandomNumber.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\dungnv44\documents\visual studio 2015\Projects\Api_RandomNumber\Api_RandomNumber\Models\RandomNumber.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

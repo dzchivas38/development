@@ -29,7 +29,7 @@ namespace Api_RandomNumber
         {
             using (var db = new Models.RandomNumberEntities())
             {
-                var obj = db.tbltests.ToList();
+                var obj = db.Tbl_Player.ToList();
                 return obj;
             }
         }

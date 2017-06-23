@@ -25,6 +25,11 @@ namespace Api_RandomNumber.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<tbltest> tbltests { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
+        public virtual DbSet<Tbl_ActionType> Tbl_ActionType { get; set; }
+        public virtual DbSet<Tbl_Player> Tbl_Player { get; set; }
+        public virtual DbSet<Tbl_PlayerType> Tbl_PlayerType { get; set; }
+        public virtual DbSet<Tbl_Syntax> Tbl_Syntax { get; set; }
+        public virtual DbSet<Tbl_CashOut> Tbl_CashOut { get; set; }
     }
 }

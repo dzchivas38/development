@@ -12,10 +12,15 @@ namespace Api_RandomNumber.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class tbltest
+    public partial class Tbl_ActionType
     {
         public int Id { get; set; }
+        public System.Guid guid { get; set; }
         public string Name { get; set; }
-        public string Status { get; set; }
+        public Nullable<int> ActionTypeLevel { get; set; }
+        public Nullable<int> InCoin { get; set; }
+        public Nullable<int> OutCoin { get; set; }
+        public Nullable<bool> IsFirstChirld { get; set; }
+        public string Description { get; set; }
     }
 }
